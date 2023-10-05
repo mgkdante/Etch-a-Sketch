@@ -10,10 +10,12 @@ const createGrid = (rows, cols) => {
             let col = document.createElement('div');
             col.classList.add('col');
             row.appendChild(col);
-
-
             col.addEventListener('mouseover', () => {
                 col.style.backgroundColor = 'black';
+            })
+
+            btnClearGrid.addEventListener('click', () => {
+                col.style.backgroundColor = 'white';
             })
         }
         gridContainer.appendChild(row);
@@ -40,9 +42,3 @@ const createGridPixels = () => {
 btnCreateGrid.addEventListener('click', () => {
     createGridPixels();
 })
-
-
-btnClearGrid.addEventListener('click', () => {
-    gridContainer.textContent = '';
-})
-
