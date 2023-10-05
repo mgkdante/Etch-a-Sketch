@@ -21,8 +21,8 @@ const createGrid = (rows, cols) => {
 }
 
 const createGridPixels = () => {
-    let rows = prompt('Enter number of rows');
-    let columns = prompt('Enter number of columns');
+    let rows= prompt('Enter number of rows and columns');
+    let columns = rows;
     gridContainer.textContent = '';
     if(rows === null || columns === null) {
         return;
